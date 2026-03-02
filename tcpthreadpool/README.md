@@ -14,25 +14,25 @@ This project was built to explore the absolute physical limits of the Thread-Per
 To validate the architecture's resilience, the server was stress-tested using **Apache JMeter (TCP Sampler)**, simulating massive concurrent connection spikes.
 
 **Test Parameters:**
-* **Concurrent Threads (Users):** 600,000
+* **Concurrent Threads (Users):** 500,000
 * **Ramp-up Period:** 60 seconds
 * **Payload:** Plain text TCP transmission
 
 **Results:**
-* **Throughput:** ~482,000 Requests Per Minute (RPM) / **~8,000 Requests Per Second (RPS)**
-* **Median Latency:** 5ms
-* **Average Latency:** 249ms
-* **Error Rate:** 0.00% 
+* **Throughput:** ~378,000 Requests Per Minute (RPM) / **~6,300 Requests Per Second (RPS)**
+* **Median Latency:** 1ms
+* **Average Latency:** 310ms
+* **Error Rate:** 0.02% 
 
 ![JMeter TCP Graph Results](<img width="1280" height="764" alt="Screenshot 2026-03-02 193641" src="https://github.com/user-attachments/assets/dbcd3866-fd03-4823-b6d0-d5431130ead1" />
 <img width="1280" height="764" alt="Screenshot 2026-03-02 193716" src="https://github.com/user-attachments/assets/05868b54-1dcd-4843-831b-4a7342974c66" />
 
 )
 
-## 🧠 Engineering Insights
-* **The Thread Pool Queue Effect:** The massive delta between the median (5ms) and average (249ms) latency perfectly illustrates the `ExecutorService`'s unbounded queue in action. During traffic spikes, the core worker threads handled the first batches instantly (5ms), while the queue successfully held hundreds of thousands of overflow requests in memory until a worker thread became available, raising the average time without dropping a single connection.
+## Engineering Insights
+* **The Thread Pool Queue Effect:** The massive delta between the median (1ms) and average (310ms) latency perfectly illustrates the `ExecutorService`'s unbounded queue in action. During traffic spikes, the core worker threads handled the first batches instantly (5ms), while the queue successfully held hundreds of thousands of overflow requests in memory until a worker thread became available, raising the average time without dropping a single connection.
 
-## 💻 Getting Started
+## Getting Started
 1. Clone the repository.
 2. Compile the server: `javac Server.java`
 3. Run the server: `java Server` (Defaults to port 8080)
