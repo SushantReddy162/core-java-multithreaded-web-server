@@ -24,7 +24,9 @@ To validate the architecture's resilience, the server was stress-tested using **
 * **Average Latency:** 249ms
 * **Error Rate:** 0.00% 
 
-![JMeter TCP Graph Results](<img width="1280" height="764" alt="Screenshot 2026-03-02 193641" src="https://github.com/user-attachments/assets/e94374dc-4f74-4da4-bc09-d95ed859ae87" />
+![JMeter TCP Graph Results](<img width="1280" height="764" alt="Screenshot 2026-03-02 193641" src="https://github.com/user-attachments/assets/dbcd3866-fd03-4823-b6d0-d5431130ead1" />
+<img width="1280" height="764" alt="Screenshot 2026-03-02 193716" src="https://github.com/user-attachments/assets/05868b54-1dcd-4843-831b-4a7342974c66" />
+
 )
 
 ## 🧠 Engineering Insights
