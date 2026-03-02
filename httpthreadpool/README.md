@@ -16,11 +16,11 @@ This project demonstrates how to manually read blocking I/O streams, parse the H
 The server was benchmarked using **Apache JMeter (HTTP Request Sampler)** to map the exact performance cost of parsing HTTP headers and serving larger HTML payloads.
 
 **The "Sweet Spot" Maximum Throughput Test:**
-* **Concurrent Threads:** 60,000
-* **Duration:** 30 seconds
+* **Concurrent Threads:** 120,000
+* **Duration:** 60 seconds
 * **Throughput:** **2,000 Requests Per Second (RPS)**
 * **Average Latency:** ~2ms
-* **Error Rate:** 0.00%
+* **Error Rate:** 0.01%
 
 ![JMeter HTTP Summary Report](<img width="1280" height="764" alt="Screenshot 2026-03-02 174126" src="https://github.com/user-attachments/assets/3d6eed06-ca20-4ee6-adbe-cd63687d5663" />
 <img width="1280" height="764" alt="Screenshot 2026-03-02 174058" src="https://github.com/user-attachments/assets/524fa04d-d9bd-4995-be35-46e6739d06a0" />
